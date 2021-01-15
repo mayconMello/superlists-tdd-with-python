@@ -33,13 +33,6 @@ class ListAndItemModelTest(TestCase):
         self.assertEqual(second_saved_item.text, 'Item the second')
         self.assertEqual(second_saved_item.list, list_)
 
-    def test_passes_correct_list_to_template(self):
-        List.objects.create()
-        correct_list = List.objects.create()
-        response = self.client.get(f'/lists/{correct_list.id}/')
-
-        self.assertEqual(response.context['list'], correct_list)
-
     def test_cannot_save_empty_list_items(self):
         list_ = List.objects.create()
         item = Item(list=list_, text='')
