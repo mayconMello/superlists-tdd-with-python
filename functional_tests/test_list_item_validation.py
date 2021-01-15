@@ -12,7 +12,7 @@ class ItemValidationTest(FunctionalTest):
         # A pagina inicial é atualizada e ha uma mensagem de erro informando
         # que itens da lista não podem estar em branco
         self.wait_for(lambda: self.assertEqual(
-            self.browser.find_element_by_css_selector('.has_error').text,
+            self.browser.find_element_by_css_selector('.has-error').text,
             "You can't have an empty list item"
             )
         )
@@ -28,7 +28,7 @@ class ItemValidationTest(FunctionalTest):
 
         # Ela recebe um aviso semelhante na pagina da lista
         self.wait_for(lambda: self.assertEqual(
-            self.browser.find_element_by_css_selector('.has_error').text,
+            self.browser.find_element_by_css_selector('.has-error').text,
             "You can't have an empty list item"
             )
         )
