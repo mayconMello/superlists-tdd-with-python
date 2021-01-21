@@ -69,7 +69,7 @@ class LoginTest(FunctionalTest):
 
         email_id = None
         start = time.time()
-        inbox = poplib.POP3_SSL('pop3.mailtrap.io')
+        inbox = poplib.POP3('pop3.mailtrap.io', 1100)
         try:
             inbox.user(EMAIL_HOST_USER)
             inbox.pass_(EMAIL_HOST_PASSWORD)
