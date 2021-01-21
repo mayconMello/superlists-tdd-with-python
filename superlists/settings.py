@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = 'c536678cb2e8a8'
-EMAIL_HOST_PASSWORD = '4e90212a92ee82'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = '2525'
 
 LANGUAGE_CODE = 'en-us'
