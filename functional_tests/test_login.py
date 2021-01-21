@@ -1,14 +1,12 @@
-import os
 import poplib
 import re
 import time
+
 from django.core import mail
-
 from selenium.webdriver.common.keys import Keys
-import re
 
-from superlists.settings import EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 from functional_tests.base import FunctionalTest
+from superlists.settings import EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 
 TEST_EMAIL = 'edith@example.com'
 
@@ -69,7 +67,7 @@ class LoginTest(FunctionalTest):
 
         email_id = None
         start = time.time()
-        inbox = poplib.POP3('pop3.mailtrap.io', 1100)
+        inbox = poplib.POP3('pop3.mailtrap.io', 9950)
         try:
             inbox.user(EMAIL_HOST_USER)
             inbox.pass_(EMAIL_HOST_PASSWORD)
