@@ -139,7 +139,7 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django': {
+        '': {
             'handlers': ['console']
         }
     },
