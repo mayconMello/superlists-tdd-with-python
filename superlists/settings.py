@@ -135,13 +135,13 @@ LOGGING = {
     'handlers': {
         'console': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler'
-        }
+            'class': 'logging.StreamHandler',
+        },
     },
     'loggers': {
-        '': {
-            'handlers': ['console']
-        }
+        'django': {
+            'handlers': ['console'],
+        },
     },
-    'root': {'level': 'INFO'}
+    'root': {'level': 'INFO'},
 }
